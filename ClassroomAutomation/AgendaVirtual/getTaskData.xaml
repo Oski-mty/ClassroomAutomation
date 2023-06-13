@@ -2,7 +2,7 @@
   <x:Members>
     <x:Property Name="out_dt_tareas" Type="InOutArgument(sd:DataTable)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1198,2115.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1198,1802</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -106,7 +106,7 @@
       <AssemblyReference>System.Memory.Data</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Secuencia Principal" sap:VirtualizedContainerService.HintSize="704,2050.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_13">
+  <Sequence DisplayName="Secuencia Principal" sap:VirtualizedContainerService.HintSize="704,1737.3333333333333" sap2010:WorkflowViewState.IdRef="Sequence_13">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Default="False" Name="existEmailsSinLeer" />
     </Sequence.Variables>
@@ -208,7 +208,7 @@
                               <OutArgument x:TypeArguments="x:String">[fechaConvertida]</OutArgument>
                             </ui:AssignOperation.To>
                             <ui:AssignOperation.Value>
-                              <InArgument x:TypeArguments="x:String">[date_fechaEntrega.ToString("yyyy/MM/d")]</InArgument>
+                              <InArgument x:TypeArguments="x:String">[date_fechaEntrega.ToString("dd/MM/yyy")]</InArgument>
                             </ui:AssignOperation.Value>
                           </ui:AssignOperation>
                           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_5">
@@ -253,7 +253,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                     </ui:MultipleAssign>
                     <ui:AddDataRow DataRow="{x:Null}" ArrayRow="[{asignatura, profesor, fechaConvertida , nombreTarea , descripcionTarea , urlTarea}]" DataTable="[out_dt_tareas]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="450,191.33333333333334" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
-                    <umab:MarkMailAsReadX DisplayName="Mark Email As Read" sap:VirtualizedContainerService.HintSize="450,54" sap2010:WorkflowViewState.IdRef="MarkMailAsReadX_1" MailMessage="[CurrentMail]" MarkAs="Read">
+                    <umab:MarkMailAsReadX DisplayName="Mark Email As Read" sap:VirtualizedContainerService.HintSize="450,54" sap2010:WorkflowViewState.IdRef="MarkMailAsReadX_2" MailMessage="[CurrentMail]" MarkAs="Read">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -308,7 +308,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </umab:GmailApplicationCard>
-    <If Condition="[existEmailsSinLeer]" DisplayName="If hay correos sin leer" sap:VirtualizedContainerService.HintSize="642,497.3333333333333" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[existEmailsSinLeer]" DisplayName="If hay correos sin leer" sap:VirtualizedContainerService.HintSize="642,184" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
